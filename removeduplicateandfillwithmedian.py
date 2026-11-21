@@ -1,0 +1,18 @@
+import pandas as pd
+import numpy as np
+
+# Create a DataFrame with missing values
+data = {'price': [100, 150, np.nan, 200, np.nan, 180, 120]}
+df = pd.DataFrame(data)
+
+# Print the DataFrame before filling missing values
+print("Before filling missing values:")
+print(df)
+
+# Fill missing values with the median
+### YOUR CODE HERE ###
+median=df['price'].median()
+df['price'].fillna(median,inplace=True)
+# Print the DataFrame after filling missing values
+print("\nAfter filling missing values:")
+print(df)
